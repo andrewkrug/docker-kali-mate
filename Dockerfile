@@ -20,6 +20,8 @@ RUN apt-get install xserver-xspice -y
 
 RUN apt-get install spice-vdagent -y
 
+RUN apt-get install xserver-xorg-video-qxl -y
+
 #Copy in the configuration
 RUN mkdir -p /etc/spice-server-config
 COPY ./spiceqxl.xorg.conf /etc/spice-server-config/spiceqxl.xorg.conf
